@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 function Nav() {
     return (
         <nav>
-            <h1>Shop</h1>
+            <h1>Welcome to <span>Shop</span></h1>
             <ul>
-                <Link to='/'/>
-                <Link to='/shop'/>
+                <Link className="page-link" to='/'>Home</Link>
+                <Link className="page-link" to='/shop'>Shop</Link>
             </ul>
         </nav>
     )
