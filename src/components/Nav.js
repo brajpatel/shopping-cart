@@ -8,8 +8,7 @@ function Nav() {
             <ul>
                 <Link className="page-link" to='/'>Home</Link>
                 <Link className="page-link" to='/shop'>Shop</Link>
-                <Link className="page-link" to='/contact'>Contact</Link>
-                <Link className="page-link" to='/cart'>Cart</Link>
+                <Link className="page-link" to='/cart'><i class="fa-solid fa-cart-shopping"></i></Link>
             </ul>
         </nav>
     )
