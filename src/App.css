@@ -8,7 +8,7 @@
 
 nav {
   background: #121212 ;
-  min-height: 90px;
+  min-height: 95px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,6 +23,7 @@ nav h1 {
 nav h1 > span {
   font-size: 2rem;
   font-family: 'Lobster', sans-serif;
+  color: #74b6e2;
 }
 
 nav ul {
@@ -32,8 +33,19 @@ nav ul {
 }
 
 .page-link {
+  position: relative;
   color: #eaebea;
   font-family: 'Cabin', sans-serif;
   text-decoration: none;
   cursor: pointer;
+}
+
+.cart-size {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  background: #74b6e2;
+  color: #121212;
+  padding: 0 0.35rem;
+  border-radius: 50%;
 }
