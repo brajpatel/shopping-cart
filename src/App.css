@@ -1,5 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 * {
   margin: 0;
@@ -47,4 +47,43 @@ nav ul {
   color: #121212;
   padding: 0 0.35rem;
   border-radius: 50%;
+}
+
+/* HOME PAGE */
+.home-background {
+  height: calc(100vh - 95px);
+  background: url('./assets/shop.jpg') no-repeat center;
+  background-size: cover;
+  transition: 0.3s ease;
+}
+
+.home-inner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: #eaebea;
+  background: rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+.home-inner:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.home-inner h2 {
+  font-family: 'Cabin';
+  font-size: 3rem;
+}
+
+.home-inner h2 > span {
+  font-style: italic;
+}
+
+.home-inner p {
+  font-family: 'Barlow';
+  font-size: 2rem;
 }
