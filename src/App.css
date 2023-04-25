@@ -9,7 +9,7 @@
 nav {
   position: sticky;
   top: 0;
-  background: #121212 ;
+  background: #121212;
   min-height: 95px;
   display: flex;
   justify-content: space-between;
@@ -114,3 +114,24 @@ nav ul {
 }
 
 /* FOOTER */
+footer {
+  background: #121212;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: #eaebea;
+  font-family: 'Barlow';
+  font-size: 1.2rem;
+}
+
+footer p > a {
+  color: #74b6e2;
+}
+
+footer p > a > i {
+  margin-left: 0.3rem;
+}
