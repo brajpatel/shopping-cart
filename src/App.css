@@ -205,7 +205,7 @@ nav ul {
   box-shadow: 0 2px 5px rgb(145, 145, 145);
   transition: 0.2s ease;
   opacity: 0;
-  animation: fadeIn 0.5s ease forwards 0.5s;
+  animation: fadeIn 0.8s ease forwards;
 }
 
 @keyframes fadeIn {
