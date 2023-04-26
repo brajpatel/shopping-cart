@@ -10,7 +10,7 @@ function Product(props) {
                 <p className="product-card-name">{name}</p>
                 <p className="product-card-price">{price}</p>
                 <p className="product-card-info">{info}</p>
-                <button className="add-to-cart" onClick={addToCart}>Add to Cart</button>
+                <button type="button" className="add-to-cart" onClick={addToCart}>Add to Cart</button>
             </div>
         </div>
     )
