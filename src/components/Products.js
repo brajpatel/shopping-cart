@@ -16,10 +16,20 @@ const allProducts = [
 ]
 
 function Products() {
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState(allProducts);
+
+    const addToCart = () => {
+        alert('added to cart');
+    }
 
     return (
-        <Product image={blackHoodie}/>
+        <div className="products">
+            {products.map((product) => {
+                return (
+                    <Product image={product.image} name={product.name} price={product.price} addToCart={addToCart}/>
+                )
+            })}
+        </div>
     )
 }
 
