@@ -6,8 +6,10 @@ function Product(props) {
     return (
         <div className="product">
             <img src={image} alt="product" />
-            <p>{name}</p>
-            <p>{price}</p>
+            <div className="product-info">
+                <p className="product-card-name">{name}</p>
+                <p className="product-card-price">{price}</p>
+            </div>
             <button onClick={addToCart}>Add to Cart</button>
         </div>
     )

@@ -11,7 +11,17 @@ const allProducts = [
     {
         image: blackHoodie,
         name: 'Black Hoodie',
-        price: '£22.99'
+        price: '£28.99'
+    },
+    {
+        image: greyHoodie,
+        name: 'Grey Hoodie',
+        price: '£24.99'
+    },
+    {
+        image: blueHoodie,
+        name: 'Blue Hoodie',
+        price: '£24.99'
     }
 ]
 
