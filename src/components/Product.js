@@ -9,8 +9,8 @@ function Product(props) {
             <div className="product-info">
                 <p className="product-card-name">{name}</p>
                 <p className="product-card-price">{price}</p>
+                <button onClick={addToCart}>Add to Cart</button>
             </div>
-            <button onClick={addToCart}>Add to Cart</button>
         </div>
     )
 }
