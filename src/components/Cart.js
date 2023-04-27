@@ -5,7 +5,7 @@ function Cart(props) {
     const { cartItems } = props;
 
     return (
-        <div>
+        <div className="cart-page">
             <h2>Items in cart</h2>
             <div className="cart">
                 {cartItems.length ?
