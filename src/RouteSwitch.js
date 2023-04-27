@@ -9,9 +9,11 @@ import Footer from './components/Footer';
 
 function RouteSwitch() {
   const [cartSize, setCartSize] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = () => {
+  const addToCart = (id) => {
     setCartSize(cartSize + 1);
+    console.log(id)
   }
   
   return (

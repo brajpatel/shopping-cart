@@ -206,20 +206,6 @@ nav ul {
   box-shadow: 0 2px 5px rgb(145, 145, 145);
   border-radius: 10px;
   transition: 0.2s ease;
-  opacity: 0;
-  animation: fadeIn 0.8s ease forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    transform: translateX(-30px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
 
 .product:hover {
@@ -231,7 +217,7 @@ nav ul {
 }
 
 .product-info {
-  border-left: 1px solid #464646;
+  border-left: 2px solid rgb(150, 150, 150);
   height: 80%;
   display: flex;
   flex-direction: column;
@@ -255,7 +241,7 @@ nav ul {
   font-family: 'Barlow', sans-serif;
   color: rgb(50, 50, 50);
   text-align: center;
-  margin: 1rem 0 1.2rem 0;
+  margin: 1rem 0 1.4rem 0;
 }
 
 .add-to-cart {
