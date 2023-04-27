@@ -11,9 +11,9 @@ function RouteSwitch() {
   const [cartSize, setCartSize] = useState(0);
   const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = (id) => {
+  const addToCart = (product) => {
     setCartSize(cartSize + 1);
-    console.log(id)
+    console.log(product);
   }
   
   return (
@@ -22,7 +22,7 @@ function RouteSwitch() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/shop' element={<Shop addToCart={addToCart}/>}/>
-        <Route path='/cart' element={<Cart/>}/>
+        <Route path='/cart' element={<Cart cartItems={cartItems}/>}/>
       </Routes>
       <Footer/> 
     </BrowserRouter>
