@@ -1,4 +1,5 @@
 import React from "react";
+import EmptyCart from "./EmptyCart";
 
 function Cart(props) {
     const { cartItems } = props;
@@ -7,7 +8,14 @@ function Cart(props) {
         <div>
             <h2>Items in cart</h2>
             <div className="cart">
-                
+                {cartItems.length ?
+                cartItems.map((item) => {
+                    return (
+                        <div>{item.name}</div>
+                    )
+                }) :
+                <EmptyCart/>
+                }
             </div>
         </div>
     )

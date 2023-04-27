@@ -13,7 +13,7 @@ function RouteSwitch() {
 
   const addToCart = (product) => {
     setCartSize(cartSize + 1);
-    console.log(product);
+    setCartItems(cartItems.concat(product[0]))
   }
   
   return (
