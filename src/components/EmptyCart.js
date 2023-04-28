@@ -5,7 +5,7 @@ function EmptyCart() {
     return (
         <div className="empty-cart">
             <p>Uh oh... Looks like your cart is empty!</p>
-            <i class="fa-regular fa-face-dizzy"></i>
+            <i className="fa-regular fa-face-dizzy"></i>
             <Link to='/shop'><button>Back to the Shop</button></Link>
         </div>
     )
