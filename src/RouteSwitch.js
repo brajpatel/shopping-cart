@@ -11,9 +11,23 @@ function RouteSwitch() {
   const [cartSize, setCartSize] = useState(0);
   const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = (product) => {
+  const addToCart = (productObj) => {
     setCartSize(cartSize + 1);
-    setCartItems(cartItems.concat(product[0]))
+
+    let product = productObj[0];
+
+    if(cartItems.filter((item) => item.name === product.name).length) {
+      let updatedCartItems = [...cartItems];
+      let index = updatedCartItems.findIndex((item) => item.name === product.name);
+      updatedCartItems[index].quantity = updatedCartItems[index].quantity + 1;
+
+      setCartItems(updatedCartItems);
+    }
+    else {
+      setCartItems(cartItems.concat(product));
+    }
+
+    
   }
   
   return (

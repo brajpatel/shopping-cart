@@ -285,7 +285,7 @@ nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   padding: 2rem 0;
 }
 
@@ -297,11 +297,12 @@ nav ul {
 }
 
 .empty-cart {
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   box-shadow: 0 2px 20px rgb(150, 150, 150);
   border-radius: 10px;
 }
@@ -309,6 +310,7 @@ nav ul {
 .empty-cart p {
   font-size: 2.5rem;
   font-family: 'Barlow', sans-serif;
+  text-align: center;
 }
 
 .empty-cart i {

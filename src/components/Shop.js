@@ -13,6 +13,7 @@ const allProducts = [
         name: 'Black Hoodie',
         price: 28.99,
         info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac turpis egestas sed tempus urna et pharetra pharetra umbasa.',
+        quantity: 1,
         id: uniqid()
     },
     {
@@ -20,6 +21,7 @@ const allProducts = [
         name: 'Grey Hoodie',
         price: 26.99,
         info: 'Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Iaculis eu non diam phasellus vestibulum.',
+        quantity: 1,
         id: uniqid()
     },
     {
@@ -27,6 +29,7 @@ const allProducts = [
         name: 'Red Hoodie',
         price: 26.99,
         info: 'Gravida quis blandit turpis cursus in hac. an sit amet nulla facilisi morbi tempus iaculis urna. Elementum nisi quis.',
+        quantity: 1,
         id: uniqid()
     },
     {
@@ -34,6 +37,7 @@ const allProducts = [
         name: 'Blue Hoodie',
         price: 24.99,
         info: 'Sit amet commodo nulla facilisi. Tincidunt sa placerat duis. Ut placerat orci nulla pellentesque. In nisl nisi scelerisque.',
+        quantity: 1,
         id: uniqid()
     },
     {
@@ -41,6 +45,7 @@ const allProducts = [
         name: 'Yellow Hoodie',
         price: 22.99,
         info: 'Et egestas quis ipsum suspendisse ultrices gravida. Ut aliquam purus sit amet. Sed tempus urna et pharetra pharetra.',
+        quantity: 1,
         id: uniqid()
     },
     {
@@ -48,6 +53,7 @@ const allProducts = [
         name: 'Pink Hoodie',
         price: 24.99,
         info: 'Egestas sed tempus urna et pharetra pharetra sassa bassa ultricies. Leo integer malesuada maecenas accumsan. Commodo umbasa.',
+        quantity: 1,
         id: uniqid()
     }
 ]
