@@ -11,7 +11,7 @@ function Cart(props) {
                 {cartItems.length ?
                 cartItems.map((item) => {
                     return (
-                        <div>{item.name}</div>
+                        <div key={item.id}>{item.name}</div>
                     )
                 }) :
                 <EmptyCart/>
