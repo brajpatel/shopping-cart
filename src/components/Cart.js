@@ -34,7 +34,11 @@ function Cart(props) {
                             )
                         })}
                     </div>
-                    <div className="cart-total">Subtotal: £0.00</div>
+                    <div className="cart-total">
+                        <p>0 Items: £0.00</p>
+                        <p>DELIVERY: £3.99</p>
+                        <p>TOTAL: ~~~ BOLD ~~~</p>
+                    </div>
                 </div> :
                 <EmptyCart/>
                 }
