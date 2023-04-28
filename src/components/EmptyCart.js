@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 function EmptyCart() {
     return (
         <div className="empty-cart">
-            <p>Looks like your cart is empty!</p>
-            <i className="fa-solid fa-cart-shopping"></i>
-            <Link to='/shop'><button>Browse Products</button></Link>
+            <p>Uh oh... Looks like your cart is empty!</p>
+            <i class="fa-regular fa-face-dizzy"></i>
+            <Link to='/shop'><button>Back to the Shop</button></Link>
         </div>
     )
 }

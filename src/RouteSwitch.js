@@ -27,7 +27,7 @@ function RouteSwitch() {
       setCartItems(cartItems.concat(product));
     }
 
-    
+    console.log(cartItems);
   }
   
   return (
