@@ -28,19 +28,19 @@ function RouteSwitch() {
     }
   }
 
-  const increaseQuantity = (product) => {
+  const increaseQuantity = (productId) => {
     setCartSize(cartSize + 1);
 
     let updatedCartItems = [...cartItems];
-    let index = updatedCartItems.findIndex((item) => item.name === product.name);
+    let index = updatedCartItems.findIndex((item) => item.id === productId);
     updatedCartItems[index].quantity = updatedCartItems[index].quantity + 1;
   }
 
-  const decreaseQuantity = (product) => {
+  const decreaseQuantity = (productId) => {
     setCartSize(cartSize - 1);
 
     let updatedCartItems = [...cartItems];
-    let index = updatedCartItems.findIndex((item) => item.name === product.name);
+    let index = updatedCartItems.findIndex((item) => item.id === productId);
     
     if(updatedCartItems[index].quantity - 1 === 0) {
       removeFromCart(product.id);
