@@ -2,7 +2,7 @@ import React from "react";
 import EmptyCart from "./EmptyCart";
 
 function Cart(props) {
-    const { cartItems } = props;
+    const { cartSize, cartItems, increaseQuantity, decreaseQuantity, removeFromCart } = props;
 
     return (
         <div className="cart-page">
@@ -26,20 +26,20 @@ function Cart(props) {
                                         </div>
                                     </div>
                                     <div className="cart-item-quantity">
-                                        <button>-</button>
+                                        <button onClick={() => decreaseQuantity(item)}>-</button>
                                         <p>{item.quantity}</p>
-                                        <button>+</button>
+                                        <button onClick={() => increaseQuantity(item)}>+</button>
                                     </div>
                                     <p className="cart-item-price">£{item.price}</p>
                                     <div className="remove-item-container">
-                                        <button className="remove-item">Remove Item</button>
+                                        <button className="remove-item" onClick={() => removeFromCart(item.id)}>Remove Item</button>
                                     </div>
                                 </div>
                             )
                         })}
                     </div>
                     <div className="cart-total">
-                        <p>0 Items: £0.00</p>
+                        <p>{cartSize} Items: £0.00</p>
                         <p>DELIVERY: £3.99</p>
                         <p>TOTAL: ~~~ BOLD ~~~</p>
                     </div>

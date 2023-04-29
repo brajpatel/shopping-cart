@@ -26,8 +26,36 @@ function RouteSwitch() {
     else {
       setCartItems(cartItems.concat(product));
     }
+  }
 
-    console.log(cartItems);
+  const increaseQuantity = (product) => {
+    setCartSize(cartSize + 1);
+
+    let updatedCartItems = [...cartItems];
+    let index = updatedCartItems.findIndex((item) => item.name === product.name);
+    updatedCartItems[index].quantity = updatedCartItems[index].quantity + 1;
+  }
+
+  const decreaseQuantity = (product) => {
+    setCartSize(cartSize - 1);
+
+    let updatedCartItems = [...cartItems];
+    let index = updatedCartItems.findIndex((item) => item.name === product.name);
+    
+    if(updatedCartItems[index].quantity - 1 === 0) {
+      removeFromCart(product.id);
+    }
+    else {
+      updatedCartItems[index].quantity = updatedCartItems[index].quantity - 1;
+    }
+  }
+
+  const removeFromCart = (productId) => {
+    let updatedCartItems = [...cartItems];
+    let index = updatedCartItems.findIndex((item) => item.id === productId);
+    updatedCartItems.splice(index, 1);
+
+    setCartItems(updatedCartItems);
   }
   
   return (
@@ -36,7 +64,17 @@ function RouteSwitch() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/shop' element={<Shop addToCart={addToCart}/>}/>
-        <Route path='/cart' element={<Cart cartItems={cartItems}/>}/>
+        <Route
+          path='/cart'
+          element={
+          <Cart
+          cartSize={cartSize}
+          cartItems={cartItems}
+          increaseQuantity={increaseQuantity}
+          decreaseQuantity={decreaseQuantity}
+          removeFromCart={removeFromCart}
+          />}
+        />
       </Routes>
       <Footer/> 
     </BrowserRouter>
