@@ -25,8 +25,12 @@ function Cart(props) {
                                             <p>Product Code: {item.id}</p>
                                         </div>
                                     </div>
-                                    <p className="cart-item-quantity">Quantity: {item.quantity}</p>
-                                    <p className="cart-item-price">Price: £{item.price}</p>
+                                    <div className="cart-item-quantity">
+                                        <button>-</button>
+                                        <p>{item.quantity}</p>
+                                        <button>+</button>
+                                    </div>
+                                    <p className="cart-item-price">£{item.price}</p>
                                     <div className="remove-item-container">
                                         <button className="remove-item">Remove Item</button>
                                     </div>

@@ -15,9 +15,9 @@ function RouteSwitch() {
     setCartSize(cartSize + 1);
 
     let product = productObj[0];
+    let updatedCartItems = [...cartItems];
 
-    if(cartItems.filter((item) => item.name === product.name).length) {
-      let updatedCartItems = [...cartItems];
+    if(updatedCartItems.filter((item) => item.name === product.name).length) {
       let index = updatedCartItems.findIndex((item) => item.name === product.name);
       updatedCartItems[index].quantity = updatedCartItems[index].quantity + 1;
 
