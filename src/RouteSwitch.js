@@ -11,10 +11,9 @@ function RouteSwitch() {
   const [cartSize, setCartSize] = useState(0);
   const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = (productObj) => {
+  const addToCart = (product) => {
     setCartSize(cartSize + 1);
 
-    let product = productObj[0];
     let updatedCartItems = [...cartItems];
 
     if(updatedCartItems.filter((item) => item.name === product.name).length) {
@@ -24,37 +23,39 @@ function RouteSwitch() {
       setCartItems(updatedCartItems);
     }
     else {
+      product.quantity = 1;
       setCartItems(cartItems.concat(product));
     }
   }
 
-  const increaseQuantity = (productId) => {
+  const increaseQuantity = (product) => {
     setCartSize(cartSize + 1);
 
     let updatedCartItems = [...cartItems];
-    let index = updatedCartItems.findIndex((item) => item.id === productId);
+    let index = updatedCartItems.findIndex((item) => item.id === product.id);
     updatedCartItems[index].quantity = updatedCartItems[index].quantity + 1;
   }
 
-  const decreaseQuantity = (productId) => {
+  const decreaseQuantity = (product) => {
     setCartSize(cartSize - 1);
 
     let updatedCartItems = [...cartItems];
-    let index = updatedCartItems.findIndex((item) => item.id === productId);
+    let index = updatedCartItems.findIndex((item) => item.id === product.id);
     
     if(updatedCartItems[index].quantity - 1 === 0) {
-      removeFromCart(product.id);
+      removeFromCart(product);
     }
     else {
       updatedCartItems[index].quantity = updatedCartItems[index].quantity - 1;
     }
   }
 
-  const removeFromCart = (productId) => {
-    let updatedCartItems = [...cartItems];
-    let index = updatedCartItems.findIndex((item) => item.id === productId);
-    updatedCartItems.splice(index, 1);
+  const removeFromCart = (product) => {
+    setCartSize(cartSize - product.quantity);
 
+    let updatedCartItems = [...cartItems];
+    let index = updatedCartItems.findIndex((item) => item.id === product.id);
+    updatedCartItems.splice(index, 1);
     setCartItems(updatedCartItems);
   }
   

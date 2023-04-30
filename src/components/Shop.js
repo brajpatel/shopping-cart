@@ -67,8 +67,6 @@ function Shop(props) {
             <div className="products">
                 <h2>Shop Our Products</h2>
                 {products.map((product) => {
-                    const productInfo = allProducts.filter((item) => item.name === product.name);
-
                     return (
                         <div key={product.id} className="product">
                             <img src={product.image} alt={product.name}/>
@@ -76,7 +74,7 @@ function Shop(props) {
                                 <p className="product-card-name">{product.name}</p>
                                 <p className="product-card-price">£{product.price}</p>
                                 <p className="product-card-info">{product.info}</p>
-                                <button type="button" className="add-to-cart" onClick={() => addToCart(productInfo)}>Add to Cart</button>
+                                <button type="button" className="add-to-cart" onClick={() => addToCart(product)}>Add to Cart</button>
                             </div>
                         </div>
                     )
