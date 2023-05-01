@@ -2,7 +2,8 @@ import React from "react";
 
 function CartItems(props) {
     const { cartSize, cartItems, cartPrice, increaseQuantity, decreaseQuantity, removeFromCart } = props;
-    const delivery = 5.99;
+    const deliveryPrice = 5.99;
+    const totalPrice = Number((cartPrice + deliveryPrice).toFixed(2));
 
     return (
         <div className="cart">
@@ -36,9 +37,9 @@ function CartItems(props) {
                 })}
             </div>
             <div className="cart-total">
-                <p>{cartSize} ITEMS: £{cartPrice}</p>
-                <p>DELIVERY: £{delivery}</p>
-                <p>TOTAL: £{cartPrice + delivery}</p>
+                <p><span>{cartSize} ITEMS:</span> £{cartPrice}</p>
+                <p><span>DELIVERY:</span> £{deliveryPrice}</p>
+                <p>TOTAL: £{totalPrice}</p>
             </div>
         </div>
     )
