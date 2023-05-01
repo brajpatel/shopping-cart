@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 function RouteSwitch() {
   const [cartSize, setCartSize] = useState(0);
   const [cartItems, setCartItems] = useState([]);
+  const [cartPrice, setCartPrice] = useState(0);
 
   const addToCart = (product) => {
     setCartSize(cartSize + 1);
@@ -19,13 +20,14 @@ function RouteSwitch() {
     if(updatedCartItems.filter((item) => item.name === product.name).length) {
       let index = updatedCartItems.findIndex((item) => item.name === product.name);
       updatedCartItems[index].quantity = updatedCartItems[index].quantity + 1;
-
-      setCartItems(updatedCartItems);
+      setCartItems(updatedCartItems);      
     }
     else {
       product.quantity = 1;
       setCartItems(cartItems.concat(product));
     }
+
+    increaseCartPrice(product);
   }
 
   const increaseQuantity = (product) => {
@@ -34,6 +36,8 @@ function RouteSwitch() {
     let updatedCartItems = [...cartItems];
     let index = updatedCartItems.findIndex((item) => item.id === product.id);
     updatedCartItems[index].quantity = updatedCartItems[index].quantity + 1;
+
+    increaseCartPrice(product);
   }
 
   const decreaseQuantity = (product) => {
@@ -47,8 +51,30 @@ function RouteSwitch() {
     }
     else {
       updatedCartItems[index].quantity = updatedCartItems[index].quantity - 1;
+      decreaseCartPrice(product);
     }
   }
+
+  const increaseCartPrice = (product) => {
+    let updatedPrice = cartPrice;
+    updatedPrice = Number((updatedPrice + product.price).toFixed(2));
+
+    setCartPrice(updatedPrice);
+  };
+
+  const decreaseCartPrice = (product) => {
+    let updatedPrice = cartPrice;
+    updatedPrice = Number((updatedPrice - product.price).toFixed(2));
+
+    setCartPrice(updatedPrice);
+  };
+
+  const removeFullPrice = (product) => {
+    let updatedPrice = cartPrice;
+    updatedPrice = Number((updatedPrice - (product.price * product.quantity)).toFixed(2));
+
+    setCartPrice(updatedPrice);
+  };
 
   const removeFromCart = (product) => {
     setCartSize(cartSize - product.quantity);
@@ -56,7 +82,15 @@ function RouteSwitch() {
     let updatedCartItems = [...cartItems];
     let index = updatedCartItems.findIndex((item) => item.id === product.id);
     updatedCartItems.splice(index, 1);
-    setCartItems(updatedCartItems);
+
+    if(updatedCartItems.length) {
+      setCartItems(updatedCartItems);
+      removeFullPrice(product);
+    }
+    else {
+      setCartItems([]);
+      setCartPrice(0);
+    }
   }
   
   return (
@@ -71,6 +105,7 @@ function RouteSwitch() {
           <Cart
           cartSize={cartSize}
           cartItems={cartItems}
+          cartPrice={cartPrice}
           increaseQuantity={increaseQuantity}
           decreaseQuantity={decreaseQuantity}
           removeFromCart={removeFromCart}

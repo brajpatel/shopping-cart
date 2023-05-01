@@ -3,7 +3,7 @@ import CartItems from "./CartItems";
 import EmptyCart from "./EmptyCart";
 
 function Cart(props) {
-    const { cartSize, cartItems, increaseQuantity, decreaseQuantity, removeFromCart } = props;
+    const { cartSize, cartItems, cartPrice, increaseQuantity, decreaseQuantity, removeFromCart } = props;
 
     return (
         <div className="cart-page">
@@ -12,6 +12,7 @@ function Cart(props) {
                 <CartItems
                 cartSize={cartSize}
                 cartItems={cartItems}
+                cartPrice={cartPrice}
                 increaseQuantity={increaseQuantity}
                 decreaseQuantity={decreaseQuantity}
                 removeFromCart={removeFromCart}

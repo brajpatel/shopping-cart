@@ -1,7 +1,8 @@
 import React from "react";
 
 function CartItems(props) {
-    const { cartSize, cartItems, increaseQuantity, decreaseQuantity, removeFromCart } = props;
+    const { cartSize, cartItems, cartPrice, increaseQuantity, decreaseQuantity, removeFromCart } = props;
+    const delivery = 5.99;
 
     return (
         <div className="cart">
@@ -35,9 +36,9 @@ function CartItems(props) {
                 })}
             </div>
             <div className="cart-total">
-                <p>{cartSize} ITEMS: £0.00</p>
-                <p>DELIVERY: £3.99</p>
-                <p>TOTAL: ~~~ BOLD ~~~</p>
+                <p>{cartSize} ITEMS: £{cartPrice}</p>
+                <p>DELIVERY: £{delivery}</p>
+                <p>TOTAL: £{cartPrice + delivery}</p>
             </div>
         </div>
     )
