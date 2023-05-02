@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import Shop from './components/Shop';
@@ -94,7 +94,7 @@ function RouteSwitch() {
   }
   
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Nav cartSize={cartSize}/>
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -113,7 +113,7 @@ function RouteSwitch() {
         />
       </Routes>
       <Footer/> 
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
