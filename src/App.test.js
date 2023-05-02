@@ -24,7 +24,7 @@ describe('shopping cart', () => {
         
         userEvent.click(button[0]);
         userEvent.click(button[2]);
-        userEvent.click(button[5])
+        userEvent.click(button[5]);
 
         expect(onClickMock).toBeCalledTimes(3);
     });
