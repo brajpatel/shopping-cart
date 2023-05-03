@@ -10,6 +10,7 @@ footer {
     color: #eaebea;
     font-family: 'Barlow';
     font-size: 1.2rem;
+    text-align: center;
   }
   
   footer p > a {
@@ -18,4 +19,11 @@ footer {
   
   footer p > a > i {
     margin-left: 0.3rem;
+  }
+
+  @media (max-width: 700px) {
+    footer p {
+      font-size: 1rem;
+      width: 60%;
+    }
   }
