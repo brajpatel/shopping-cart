@@ -37,8 +37,8 @@ function CartItems(props) {
                 })}
             </div>
             <div className="cart-total">
-                <p><span>{cartSize} ITEMS:</span> £{cartPrice}</p>
-                <p><span>DELIVERY:</span> £{deliveryPrice}</p>
+                <p><span>{cartSize} ITEMS: </span>£{cartPrice}</p>
+                <p><span>DELIVERY: </span>£{deliveryPrice}</p>
                 <p>TOTAL: £{totalPrice}</p>
             </div>
         </div>
