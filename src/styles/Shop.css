@@ -126,6 +126,10 @@
   }
 
   @media (max-width: 970px) {
+    .products h2 {
+      font-size: 2.2rem;
+    }
+    
     .product {
       margin: 1rem;
       min-height: 320px;
