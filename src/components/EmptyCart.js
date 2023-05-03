@@ -1,3 +1,4 @@
+import "../styles/EmptyCart.css";
 import React from "react";
 import { Link } from "react-router-dom";
 

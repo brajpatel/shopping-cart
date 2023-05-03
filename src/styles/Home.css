@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .home-background {
     height: calc(100vh - 95px);
     background: url('../assets/home-page.jpg') no-repeat center;

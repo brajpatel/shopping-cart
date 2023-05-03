@@ -1,4 +1,3 @@
-import './App.css';
 import { useState } from 'react';
 import { HashRouter, BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
