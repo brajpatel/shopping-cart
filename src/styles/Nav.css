@@ -95,3 +95,18 @@ nav {
     padding: 0 0.35rem;
     border-radius: 50%;
   }
+
+  @media (max-width: 970px) {
+    nav {
+      justify-content: center;
+    }
+
+    nav h1 {
+      display: none;
+    }
+
+    nav ul {
+      width: 100%;
+      justify-content: space-around;
+    }
+  }
