@@ -1,3 +1,4 @@
+import "../styles/Shop.css"
 import React, { useState } from "react";
 import uniqid from "uniqid";
 import blackHoodie from "../assets/black-hoodie.png";

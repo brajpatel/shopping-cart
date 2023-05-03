@@ -1,3 +1,4 @@
+import "../styles/Cart.css"
 import React from "react";
 import CartItems from "./CartItems";
 import EmptyCart from "./EmptyCart";
