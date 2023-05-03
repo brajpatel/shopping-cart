@@ -30,8 +30,8 @@ describe('shopping cart', () => {
     });
 
     it('adds an item to cart', () => {
-        const addToCart = () => cart.push('item');
         const cart = [];
+        const addToCart = () => cart.push('item');
         
         const onClickMock = jest.fn(addToCart);
 
@@ -44,8 +44,8 @@ describe('shopping cart', () => {
     });
     
     it('adds multiple items to cart', () => {
-        const addToCart = () => cart.push('item');
         const cart = [];
+        const addToCart = () => cart.push('item');
 
         const onClickMock = jest.fn(addToCart);
 
