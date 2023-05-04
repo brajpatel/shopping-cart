@@ -1,6 +1,8 @@
 # Shopping Cart
-![preview-img1](https://github.com/brajpatel/shopping-cart/blob/main/src/preview/preview-img1.png)
-![preview-img2](https://github.com/brajpatel/shopping-cart/blob/main/src/preview/preview-img2.png)
+![preview-img1](https://github.com/brajpatel/shopping-cart/blob/main/src/preview/preview-img1.jpg)
+![preview-img2](https://github.com/brajpatel/shopping-cart/blob/main/src/preview/preview-img2.jpg)
+![preview-img3](https://github.com/brajpatel/shopping-cart/blob/main/src/preview/preview-img3.jpg)
+![preview-img4](https://github.com/brajpatel/shopping-cart/blob/main/src/preview/preview-img4.jpg)
 ## About
 Write something here
 <br/><br/>
