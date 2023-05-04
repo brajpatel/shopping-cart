@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.a6b4da61.css",
+    "main.js": "/shopping-cart/static/js/main.521ec4aa.js",
+    "static/media/home-page.jpg": "/shopping-cart/static/media/home-page.724f67d81c00d2548649.jpg",
+    "static/media/shop-page.jpg": "/shopping-cart/static/media/shop-page.d19760e69a34742dc556.jpg",
+    "static/media/red-hoodie.png": "/shopping-cart/static/media/red-hoodie.4dc732eed687588cb164.png",
+    "static/media/blue-hoodie.png": "/shopping-cart/static/media/blue-hoodie.e3e338fbe62755753bf1.png",
+    "static/media/black-hoodie.png": "/shopping-cart/static/media/black-hoodie.8a9067dec5cec5204b22.png",
+    "static/media/pink-hoodie.png": "/shopping-cart/static/media/pink-hoodie.a78d217345a62a697140.png",
+    "static/media/grey-hoodie.png": "/shopping-cart/static/media/grey-hoodie.76fd4bea9b0c4304d1c5.png",
+    "static/media/yellow-hoodie.png": "/shopping-cart/static/media/yellow-hoodie.b46988be3ba35f3c39ee.png",
+    "index.html": "/shopping-cart/index.html",
+    "main.a6b4da61.css.map": "/shopping-cart/static/css/main.a6b4da61.css.map",
+    "main.521ec4aa.js.map": "/shopping-cart/static/js/main.521ec4aa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6b4da61.css",
+    "static/js/main.521ec4aa.js"
+  ]
+}
